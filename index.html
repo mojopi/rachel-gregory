@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Hi+Melody|Quicksand" rel="stylesheet">
+    <style>
+    .heading {
+        font-family: "Cabin Sketch", cursive;
+        color: white;
+        font-size: 90px;
+    }
+
+    .text-box {
+        margin-left: 2%;
+        color: white;
+        position: relative;
+        z-index: 1;
+        left: 0px;
+        width: 49%;
+        font-size: 35px;
+        font-family: 'Quicksand', cursive;
+    }
+
+    #squid {
+        z-index: -1;
+        background-image: url(squid.png);
+        background-size: cover;
+        width: 450px;
+        height: 940px;
+        position: absolute;
+        left: 53%;
+    }
+
+    #dot-container {
+        padding: 10%;
+        border-radius: 20%;
+        position: relative;
+        top: 10%;
+        width: 20%;
+        left: 30%;
+        height: 50%;
+    }
+
+
+    #intro {
+        z-index: -1;
+        height: 100%;
+        position: relative;
+        background-image:url(water.png);
+        background-size:cover;
+    }
+
+    #squid-repro {
+        position: absolute;
+        top: 100%;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        background-image:url(water.png);
+        background-size: cover;
+        background-color:blue;
+    }
+    </style>
+</head>
+<div id="intro">
+
+    <body id="body">
+        <div class="text-box">
+            <span class="heading">Congratulations! You've found a mate!!</span>
+            <p>…but you're not the only ones!!<br>
+                <br> To connect your journey with something bigger than yourselves and to give you some perspective on where you stand in the animal kingdom, you'll be receive a link every week or so to a new posting on your own personal website. Each post will introduce you to and expand your conception of partnership and reproduction and will connect your new journey to the other thigns going on on incredible planet!</p>
+        </div>
+        <div id="squid">
+            <div id="dot-container"></div>
+        </div>
+</div>
+<div id="squid-repro">
+    <div class="text-box">
+        <span class="heading">Squids and Cuttlefish</span>
+        <p></p>
+    </div>
+</div>
+<script type="text/javascript">
+function makeBlueColor() {
+    return Math.floor(Math.random() * 10) + "," +
+        Math.floor(Math.random() * 10) + "," + Math.floor(200 + Math.random() * 100) + "," + (Math.random() + 0.4);;
+    console.log(makeColor())
+
+};
+
+function setBackgroundColor() {
+    var x = document.getElementById('intro')
+    x.style.backgroundColor = "rgba(" + makeBlueColor() + ")";
+    setInterval(makeBlueColor(), 500);
+    console.log("background color is " + makeBlueColor());
+};
+
+setInterval(setBackgroundColor, 500);
+
+var squid = document.getElementById("squid");
+
+function squidOpacity() {
+    squid.style.opacity = (0.6 + Math.random());
+
+};
+
+setInterval(squidOpacity, 500);
+
+function squidPosition() {
+    squid.style.top = Math.floor(Math.random() * 100) + "px";
+    console.log('hi');
+}
+
+
+setInterval(squidPosition, 400)
+
+
+function makeDots() {
+    var container = document.getElementById("dot-container");
+    var self;
+    self = this;
+    var circle = document.createElement("div");
+    container.appendChild(circle);
+    circle.style.width = "4px";
+    circle.style.height = "4px";
+    circle.style.borderRadius = "50%";
+    circle.style.position = "relative";
+    circle.style.zIndex = 1;
+
+
+    function setDotPositionColor() {
+        circle.style.backgroundColor = "rgb(" +
+            Math.floor(Math.random() * 256) + "," +
+            Math.floor(Math.random() * 10) + "," +
+            Math.floor(Math.random() * 10) +
+
+            ")";
+
+
+
+        circle.style.left = Math.floor(Math.random() * 100) + "px";
+
+        circle.style.top = Math.floor(Math.random() * 200) + "px";
+
+    }
+    setInterval(setDotPositionColor, 300)
+
+
+}
+var i;
+
+for (i = 0; i < 50; i = i + 1) { makeDots() }
+</script>
+</body>
+
+</html>

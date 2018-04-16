@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Hi+Melody|Quicksand" rel="stylesheet">
+    <style>
+    p {
+        
+    }
+
+    .headings {
+        text-align: center;
+        margin: auto;
+        font-family: "Cabin Sketch", cursive;
+    }
+
+    #title {
+        font-size: 60px;
+        text-align: center;
+    }
+
+    #sub {
+        
+    }
+
+    .text {
+        font-size: 30px;
+        font-family:'Quicksand', cursive;
+    }
+
+    body {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #cuttlefish1{
+        width:800px;
+        height:500px;
+        background-image:url("cuttle-fish1.png");
+        background-size:contain;
+        background-repeat:no-repeat;
+
+    }
+
+    #test{
+        width:60%;
+        position:relative;
+        top:15%;
+        left:10%;
+        font-size: 45px;
+        text-align: left;
+        font-color:white;
+    }
+    </style>
+    <title></title>
+</head>
+
+<body id="body">
+    <audio controls autoplay src="mammals-trim.m4a"></audio>
+    <div id="cuttlefish1"><div id="test"><p class="headings" id="sub">Congratulations! You've found a mate…but you're not the only ones!!</p></div></div>
+    <p class="text">To connect your journey with something bigger than yourselves and to give you some perspective on where you stand in the animal kingdom, you'll be receive a link every week or so to a new posting on your own personal website. Each post will introduce you to and expand your conception of partnership and reproduction and will connect your new journey to the other thigns going on on incredible planet!</p>
+
+    <script>
+
+         function makeCuttleFishColor1() {
+        return Math.floor(Math.random() * 250) + "," + Math.floor(Math.random() * 50) + "," + Math.floor(Math.random() * 50) +
+        Math.floor(Math.random() * 1);
+        console.log(makeColor())
+
+    };
+
+
+    function makeRandomColor() {
+        return Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256);
+        console.log(makeColor())
+
+    };
+
+      function makeBlueColor() {
+        return Math.floor(Math.random() * 70) + "," + Math.floor(Math.random() * 70) + "," + 255;
+        console.log(makeColor())
+
+    };
+
+    // var x = "document.getElementById(" + x + ")";
+
+
+
+    function setFishColor() {
+        var x = document.getElementById('cuttlefish1')
+        x.style.backgroundColor = "rgba(" + makeCuttleFishColor1() + ")";
+        setInterval(makeCuttleFishColor1(), 500);
+        console.log("title color is " + makeCuttleFishColor1());
+    };
+
+      function setTextColor() {
+        var x = document.getElementById('body')
+        x.style.color = "rgb(" + makeRandomColor() + ")";
+        setInterval(makeRandomColor(), 500);
+        console.log("text color is " + makeRandomColor());
+    };
+
+      function setBackgroundColor() {
+        var x = document.getElementById('body')
+        x.style.backgroundColor = "rgb(" + makeBlueColor() + ")";
+        setInterval(makeBlueColor(), 500);
+        console.log("background color is " + makeBlueColor());
+    };
+
+    //i wanted to make setColor take an argument which was an element and randomy change the color of that//
+
+
+
+setInterval(setFishColor, 500);
+
+setInterval(setTextColor, 500);
+
+
+setInterval(setBackgroundColor, 250);
+
+
+
+
+
+     </script>
+</body>
+
+</html>
