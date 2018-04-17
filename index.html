@@ -43,45 +43,96 @@
     }
 
 
-    #intro {
-        z-index: -1;
-        height: 100%;
-        position: relative;
-        background-image:url(water.png);
-        background-size:cover;
+    #a {
+        background-image: url(water.png);
     }
 
-    #squid-repro {
-        position: absolute;
+    #b {
         top: 100%;
+        background-image: url(water.png);
+    }
+
+    #c {
+        top: 200%;
+        background-image: url(black-watercolor.png);
+    }
+
+    section {
+        position: absolute;
         height: 100%;
         width: 100%;
         z-index: -1;
-        background-image:url(water.png);
         background-size: cover;
-        background-color:blue;
     }
+
+    #angler{
+        width:400px;
+        height:250px;
+        background-size:cover;
+        animation: light 1s infinite;
+        position:absolute;
+        left:55%;
+
+    }
+
+
+@-webkit-keyframes light {
+    from {background-image: url(angler1.png);}
+    to {background-image: url(angler2.png);
+
+}
+
     </style>
 </head>
-<div id="intro">
+<section id="a">
 
     <body id="body">
         <div class="text-box">
             <span class="heading">Congratulations! You've found a mate!!</span>
-            <p>…but you're not the only ones!!<br>
+            <p>…but you're not the only ones!!
+                <br>
                 <br> To connect your journey with something bigger than yourselves and to give you some perspective on where you stand in the animal kingdom, you'll be receive a link every week or so to a new posting on your own personal website. Each post will introduce you to and expand your conception of partnership and reproduction and will connect your new journey to the other thigns going on on incredible planet!</p>
         </div>
         <div id="squid">
             <div id="dot-container"></div>
         </div>
-</div>
-<div id="squid-repro">
+</section>
+<section id="b">
     <div class="text-box">
         <span class="heading">Squids and Cuttlefish</span>
         <p></p>
-    </div>
+</section>
 </div>
-<script type="text/javascript">
+<section id="c">
+    <div class="text-box">
+        <span class="heading">Angler Fish</span>
+        <p></p>
+
+
+    </div>
+    <div id="angler">
+
+        
+    </div>
+</section>
+
+<script type="text/javascript">//javascript for angler fish//
+
+var angler = document.getElementById("angler");
+
+// function light () {
+//     angler.style.backgroundImage = "url(" + angler1.png + ")";
+// }
+
+
+    
+
+</script>
+
+
+
+
+<script type="text/javascript"> //javascript for intro and squid-repro//
 function makeBlueColor() {
     return Math.floor(Math.random() * 10) + "," +
         Math.floor(Math.random() * 10) + "," + Math.floor(200 + Math.random() * 100) + "," + (Math.random() + 0.4);;
