@@ -64,6 +64,12 @@
         background-image: url(grey-watercolor.png);
     }
 
+
+    #e {
+        top: 400%;
+        background-image: url(grey-watercolor.png);
+    }
+
     section {
         position: absolute;
         height: 100%;
@@ -115,6 +121,8 @@
         left: 50%;
     }
 
+
+
     @-webkit-keyframes claw {
         0% {
             background-image: url(fiddler1.png);
@@ -133,12 +141,45 @@
             background-image: url(fiddler2.png);
         }
 
-
-
-
         100% {
             background-image: url(fiddler2.png);
         }
+    }
+
+    #slug {
+        top:8%;
+        width: 500px;
+        height: 580px;
+        background-image: url("leopard-slug.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        animation: spin 4s infinite;
+        transition-timing-function: ease-in-out;
+        position: absolute;
+    }
+
+
+    @-webkit-keyframes spin {
+
+        0% {
+            left:0%;
+         
+            transform: rotate(1deg);
+        }
+
+        50% {
+            left:2%;
+            transform: rotate(-1deg);
+        }
+
+        100% {
+            left:0%;
+         
+            transform: rotate(1deg);
+        }
+
+      
     }
 
 
@@ -166,7 +207,7 @@
 
         #fiddler {
             left: 25%;
-            top:0%;
+            top: 0%;
         }
     }
     </style>
@@ -204,6 +245,13 @@
         <p></p>
     </div>
     <div id="fiddler"></div>
+</section>
+<section id="e">
+    <div class="text-box">
+        <span class="heading">Leopard Slugs</span>
+        <p></p>
+    </div>
+    <div id="slug"></div>
 </section>
 <script type="text/javascript">
 //javascript for angler fish//
