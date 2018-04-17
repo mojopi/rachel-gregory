@@ -18,7 +18,7 @@
         z-index: 1;
         left: 0px;
         width: 49%;
-        font-size: 35px;
+        font-size: 20px;
         font-family: 'Quicksand', cursive;
     }
 
@@ -26,8 +26,8 @@
         z-index: -1;
         background-image: url(squid.png);
         background-size: cover;
-        width: 450px;
-        height: 940px;
+        width: 337.5px;
+        height: 720px;
         position: absolute;
         left: 53%;
     }
@@ -39,7 +39,9 @@
         top: 10%;
         width: 20%;
         left: 30%;
-        height: 50%;
+        height: 30%;
+        /*        background-color:red;
+*/
     }
 
 
@@ -57,6 +59,11 @@
         background-image: url(black-watercolor.png);
     }
 
+    #d {
+        top: 300%;
+        background-image: url(black-watercolor.png);
+    }
+
     section {
         position: absolute;
         height: 100%;
@@ -65,23 +72,103 @@
         background-size: cover;
     }
 
-    #angler{
-        width:400px;
-        height:250px;
-        background-size:cover;
+    #angler {
+        width: 800px;
+        height: 500px;
+        background-size: cover;
         animation: light 1s infinite;
-        position:absolute;
-        left:55%;
+        position: absolute;
+        left: 35%;
+    }
 
+    @-webkit-keyframes light {
+        0% {
+            background-image: url(angler1.png);
+        }
+        20% {
+            background-image: url(angler1.png);
+        }
+        40% {
+            background-image: url(angler1.png);
+        }
+        60% {
+            background-image: url(angler2.png);
+        }
+        80% {
+            background-image: url(angler2.png);
+        }
+        100% {
+            background-image: url(angler2.png);
+        }
+    }
+
+    #fiddler {
+        width: 700px;
+        height: 400px;
+        transition-timing-function: none;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        animation: claw 0.8s infinite;
+        position: absolute;
+        transition-property: none;
+        left: 50%;
+    }
+
+    @-webkit-keyframes claw {
+        0% {
+            background-image: url(fiddler1.png);
+        }
+
+        20% {
+            background-image: url(fiddler1.png);
+        }
+        40% {
+            background-image: url(fiddler1.png);
+        }
+        60% {
+            background-image: url(fiddler2.png);
+        }
+        80% {
+            background-image: url(fiddler2.png);
+        }
+
+
+
+
+        100% {
+            background-image: url(fiddler2.png);
+        }
     }
 
 
-@-webkit-keyframes light {
-    from {background-image: url(angler1.png);}
-    to {background-image: url(angler2.png);
+    @media (max-device-width: 667px) {
 
-}
+        .text-box {
+            font-size: 35px;
+        }
 
+        #squid {
+            width: 450px;
+            height: 900px;
+        }
+
+        #dot-container {
+            height: 50%;
+        }
+
+        #angler {
+            width: 520px;
+            height: 325px;
+            left: 45%;
+        }
+
+
+        #fiddler {
+            left: 25%;
+            top:0%;
+        }
+    }
     </style>
 </head>
 <section id="a">
@@ -107,32 +194,28 @@
     <div class="text-box">
         <span class="heading">Angler Fish</span>
         <p></p>
-
-
     </div>
     <div id="angler">
-
-        
     </div>
 </section>
-
-<script type="text/javascript">//javascript for angler fish//
+<section id="d">
+    <div class="text-box">
+        <span class="heading">Fiddler Crabs</span>
+        <p></p>
+    </div>
+    <div id="fiddler"></div>
+</section>
+<script type="text/javascript">
+//javascript for angler fish//
 
 var angler = document.getElementById("angler");
 
 // function light () {
 //     angler.style.backgroundImage = "url(" + angler1.png + ")";
 // }
-
-
-    
-
 </script>
-
-
-
-
-<script type="text/javascript"> //javascript for intro and squid-repro//
+<script type="text/javascript">
+//javascript for intro and squid-repro//
 function makeBlueColor() {
     return Math.floor(Math.random() * 10) + "," +
         Math.floor(Math.random() * 10) + "," + Math.floor(200 + Math.random() * 100) + "," + (Math.random() + 0.4);;
@@ -141,7 +224,7 @@ function makeBlueColor() {
 };
 
 function setBackgroundColor() {
-    var x = document.getElementById('intro')
+    var x = document.getElementById('a')
     x.style.backgroundColor = "rgba(" + makeBlueColor() + ")";
     setInterval(makeBlueColor(), 500);
     console.log("background color is " + makeBlueColor());
@@ -192,7 +275,7 @@ function makeDots() {
 
         circle.style.left = Math.floor(Math.random() * 100) + "px";
 
-        circle.style.top = Math.floor(Math.random() * 200) + "px";
+        circle.style.top = Math.floor(Math.random() * 100) + "px";
 
     }
     setInterval(setDotPositionColor, 300)
