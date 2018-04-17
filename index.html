@@ -2,267 +2,73 @@
 <html>
 
 <head>
-    <script type="text/javascript" src="script.js"></script>
     <link href="style.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Hi+Melody|Quicksand" rel="stylesheet">
-    <style>
-    .heading {
-        font-family: "Cabin Sketch", cursive;
-        color: white;
-        font-size: 90px;
-    }
-
-    .text-box {
-        margin-left: 2%;
-        color: white;
-        position: relative;
-        z-index: 1;
-        left: 0px;
-        width: 49%;
-        font-size: 20px;
-        font-family: 'Quicksand', cursive;
-    }
-
-    #squid {
-        z-index: -1;
-        background-image: url(squid.png);
-        background-size: cover;
-        width: 337.5px;
-        height: 720px;
-        position: absolute;
-        left: 53%;
-    }
-
-    #dot-container {
-        padding: 10%;
-        border-radius: 20%;
-        position: relative;
-        top: 10%;
-        width: 20%;
-        left: 30%;
-        height: 30%;
-        /*        background-color:red;
-*/
-    }
-
-
-    #a {
-        background-image: url(water.png);
-    }
-
-    #b {
-        top: 100%;
-        background-image: url(water.png);
-    }
-
-    #c {
-        top: 200%;
-        background-image: url(black-watercolor.png);
-    }
-
-    #d {
-        top: 300%;
-        background-image: url(grey-watercolor.png);
-    }
-
-
-    #e {
-        top: 400%;
-        background-image: url(grey-watercolor.png);
-    }
-
-    section {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        z-index: -1;
-        background-size: cover;
-    }
-
-    #angler {
-        width: 800px;
-        height: 500px;
-        background-size: cover;
-        animation: light 1s infinite;
-        position: absolute;
-        left: 35%;
-    }
-
-    @-webkit-keyframes light {
-        0% {
-            background-image: url(angler1.png);
-        }
-        20% {
-            background-image: url(angler1.png);
-        }
-        40% {
-            background-image: url(angler1.png);
-        }
-        60% {
-            background-image: url(angler2.png);
-        }
-        80% {
-            background-image: url(angler2.png);
-        }
-        100% {
-            background-image: url(angler2.png);
-        }
-    }
-
-    #fiddler {
-        width: 700px;
-        height: 400px;
-        transition-timing-function: none;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        animation: claw 0.8s infinite;
-        position: absolute;
-        transition-property: none;
-        left: 50%;
-    }
-
-
-
-    @-webkit-keyframes claw {
-        0% {
-            background-image: url(fiddler1.png);
-        }
-
-        20% {
-            background-image: url(fiddler1.png);
-        }
-        40% {
-            background-image: url(fiddler1.png);
-        }
-        60% {
-            background-image: url(fiddler2.png);
-        }
-        80% {
-            background-image: url(fiddler2.png);
-        }
-
-        100% {
-            background-image: url(fiddler2.png);
-        }
-    }
-
-    #slug {
-        top: 8%;
-        width: 500px;
-        height: 580px;
-        background-image: url("leopard-slug.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        animation: spin 4s infinite;
-        transition-timing-function: ease-in-out;
-        position: absolute;
-    }
-
-
-    @-webkit-keyframes spin {
-
-        0% {
-            left: 0%;
-
-            transform: rotate(1deg);
-        }
-
-        50% {
-            left: 2%;
-            transform: rotate(-1deg);
-        }
-
-        100% {
-            left: 0%;
-
-            transform: rotate(1deg);
-        }
-    }
-
-
-    @media (max-device-width: 667px) {
-
-        .text-box {
-            font-size: 32px;
-        }
-
-        #squid {
-            width: 450px;
-            height: 900px;
-        }
-
-        #dot-container {
-            height: 50%;
-        }
-
-        #angler {
-            width: 520px;
-            height: 325px;
-            left: 45%;
-        }
-
-
-        #fiddler {
-            left: 25%;
-            top: 0%;
-        }
-    }
-    </style>
+    <script type="text/javascript" src="javascript.js"></script>
 </head>
-<section id="a">
 
-    <body id="body">
+<body id="body">
+    <section id="a">
         <div class="text-box">
             <span class="heading">Congratulations! You've found a mate!!</span>
             <p>…but you're not the only ones!!
                 <br>
                 <br> To connect your journey with something bigger than yourselves and to give you some perspective on where you stand in the animal kingdom, you'll be receive a link every week or so to a new posting on your own personal website. Each post will expand your conception of partnership and reproduction and will connect your voyage to the diversity of mating rituals on this incredible planet!</p>
         </div>
-        <div id="squid">
-            <div id="dot-container"></div>
+        <div id="squid" style="opacity:1.0; top:0%;">
+            <div id="container"></div>
         </div>
-</section>
-<section id="b">
-    <div class="text-box">
-        <span class="heading">Squids and Cuttlefish</span>
-        <p></p>
-</section>
-</div>
-<section id="c">
-    <div class="text-box">
-        <span class="heading">Angler Fish</span>
-        <p></p>
+    </section>
+
+
+
+
+    <section id="b">
+        <div class="text-box">
+            <span class="heading">Squids and Cuttlefish</span>
+            <p></p>
+    </section>
     </div>
-    <div id="angler">
-    </div>
-</section>
-<section id="d">
-    <div class="text-box">
-        <span class="heading">Fiddler Crabs</span>
-        <p></p>
-    </div>
-    <div id="fiddler"></div>
-</section>
-<section id="e">
-    <div class="text-box">
-        <span class="heading">Leopard Slugs</span>
-        <p></p>
-    </div>
-    <div id="slug"></div>
-</section>
-<script type="text/javascript">
-//javascript for angler fish//
+    <section id="c">
+        <div class="text-box">
+            <span class="heading">Angler Fish</span>
+            <p></p>
+        </div>
+        <div id="angler">
+        </div>
+    </section>
+    <section id="d">
+        <div class="text-box">
+            <span class="heading">Fiddler Crabs</span>
+            <p></p>
+        </div>
+        <div id="fiddler"></div>
+    </section>
+    <section id="e">
+        <div class="text-box">
+            <span class="heading">Leopard Slugs</span>
+            <p></p>
+        </div>
+        <div id="slug"></div>
+    </section>
+
+       <section id="f">
+        <div class="text-box">
+            <span class="heading">Six Plumed Bird of Paradise</span>
+            <p></p>
+        </div>
+        <div id="paradise"></div>
+    </section>
+    
+<script>
+    //javascript for angler fish//
 
 var angler = document.getElementById("angler");
 
 // function light () {
 //     angler.style.backgroundImage = "url(" + angler1.png + ")";
 // }
-</script>
-<script type="text/javascript">
 //javascript for intro and squid-repro//
 function makeBlueColor() {
     return Math.floor(Math.random() * 10) + "," +
@@ -299,7 +105,7 @@ setInterval(squidPosition, 400)
 
 
 function makeDots() {
-    var container = document.getElementById("dot-container");
+    var container = document.getElementById("container");
     var self;
     self = this;
     var circle = document.createElement("div");
@@ -333,6 +139,7 @@ function makeDots() {
 var i;
 
 for (i = 0; i < 50; i = i + 1) { makeDots() }
+
 </script>
 </body>
 

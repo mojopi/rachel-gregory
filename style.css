@@ -1,0 +1,270 @@
+  .heading {
+      font-family: "Cabin Sketch", cursive;
+      color: white;
+      font-size: 90px;
+  }
+
+  .text-box {
+      margin-left: 2%;
+      color: white;
+      position: relative;
+      z-index: 1;
+      left: 0px;
+      width: 49%;
+      font-size: 20px;
+      font-family: 'Quicksand', cursive;
+  }
+
+  #squid {
+      z-index: -1;
+      background-image: url(squid.png);
+      background-size: cover;
+      width: 337.5px;
+      height: 720px;
+      position: absolute;
+      left: 53%;
+  }
+
+  #container {
+      padding: 10%;
+      border-radius: 20%;
+      position: relative;
+      top: 10%;
+      width: 20%;
+      left: 30%;
+      height: 30%;
+      /*        background-color:red;
+*/
+  }
+
+
+  #a {
+      background-image: url(water.png);
+  }
+
+  #b {
+      top: 100%;
+      background-image: url(water.png);
+  }
+
+  #c {
+      top: 200%;
+      background-image: url(black-watercolor.png);
+  }
+
+  #d {
+      top: 300%;
+      background-image: url(grey-watercolor.png);
+  }
+
+
+  #e {
+      top: 400%;
+      background-image: url(grey-watercolor.png);
+  }
+
+  #f {
+      top: 500%;
+      background-image: url(green-watercolor.png);
+  }
+
+  section {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      background-size: cover;
+  }
+
+  #angler {
+      width: 800px;
+      height: 500px;
+      background-size: cover;
+      animation: light 1s infinite;
+      position: absolute;
+      left: 35%;
+  }
+
+  @-webkit-keyframes light {
+      0% {
+          background-image: url(angler1.png);
+      }
+      20% {
+          background-image: url(angler1.png);
+      }
+      40% {
+          background-image: url(angler1.png);
+      }
+      60% {
+          background-image: url(angler2.png);
+      }
+      80% {
+          background-image: url(angler2.png);
+      }
+      100% {
+          background-image: url(angler2.png);
+      }
+  }
+
+  #fiddler {
+      width: 700px;
+      height: 400px;
+      transition-timing-function: none;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      animation: claw 0.8s infinite;
+      position: absolute;
+      transition-property: none;
+      left: 50%;
+  }
+
+
+
+  @-webkit-keyframes claw {
+      0% {
+          background-image: url(fiddler1.png);
+      }
+
+      20% {
+          background-image: url(fiddler1.png);
+      }
+      40% {
+          background-image: url(fiddler1.png);
+      }
+      60% {
+          background-image: url(fiddler2.png);
+      }
+      80% {
+          background-image: url(fiddler2.png);
+      }
+
+      100% {
+          background-image: url(fiddler2.png);
+      }
+  }
+
+  #slug {
+      top: 8%;
+      width: 500px;
+      height: 580px;
+      background-image: url("leopard-slug.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      animation: spin 4s infinite;
+      transition-timing-function: ease-in-out;
+      position: absolute;
+  }
+
+
+  @-webkit-keyframes spin {
+
+      0% {
+          left: 0%;
+
+          transform: rotate(1deg);
+      }
+
+      50% {
+          left: 2%;
+          transform: rotate(-1deg);
+      }
+
+      100% {
+          left: 0%;
+
+          transform: rotate(1deg);
+      }
+  }
+
+  #paradise {
+      top: 8%;
+      width: 500px;
+      /*        background-color:blue;
+*/
+      height: 550px;
+      /*        background-image: url("bird-of-paradise.png");
+*/
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+/*      animation: walk 3s infinite;
+*/      animation: dance 2s infinite;
+      transition-timing-function: ease-in-out;
+      position: absolute;
+  }
+
+  @-webkit-keyframes dance {
+
+      0% {
+          left: 40%;
+
+          transform: rotate(2deg);
+          background-image: url(paradise1.png);
+      }
+
+      20% {
+          background-image: url(paradise2.png);
+      }
+
+      40% {
+          left: 45%;
+          transform: rotate(-2deg);
+          background-image: url(paradise3.png);
+      }
+
+      60% {
+          background-image: url(paradise1.png);
+      }
+
+      80% {
+          background-image: url(paradise4.png);
+      }
+
+      100% {
+          left: 40%;
+
+          transform: rotate(2deg);
+          background-image: url(paradise5.png);
+      }
+  }
+
+
+ /* @-webkit-keyframes walk {
+
+      0% {}
+
+      50% {}
+
+      100% {}
+  }*/
+
+
+  @media (max-device-width: 667px) {
+
+      .text-box {
+          font-size: 32px;
+      }
+
+      #squid {
+          width: 450px;
+          height: 900px;
+      }
+
+      #dot-container {
+          height: 50%;
+      }
+
+      #angler {
+          width: 520px;
+          height: 325px;
+          left: 45%;
+      }
+
+
+      #fiddler {
+          left: 25%;
+          top: 0%;
+      }
+  }
