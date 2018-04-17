@@ -60,12 +60,17 @@
 
   #e {
       top: 400%;
-      background-image: url(grey-watercolor.png);
+      background-image: url(black-watercolor.png);
   }
 
   #f {
       top: 500%;
       background-image: url(green-watercolor.png);
+  }
+
+   #g {
+      top: 500%;
+      background-image: url(underwater-boulder-painting.jpg);
   }
 
   section {
@@ -181,16 +186,11 @@
   #paradise {
       top: 8%;
       width: 500px;
-      /*        background-color:blue;
-*/
       height: 550px;
-      /*        background-image: url("bird-of-paradise.png");
-*/
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
-/*      animation: walk 3s infinite;
-*/      animation: dance 2s infinite;
+  animation: dance 2s infinite;
       transition-timing-function: ease-in-out;
       position: absolute;
   }
@@ -228,6 +228,43 @@
           transform: rotate(2deg);
           background-image: url(paradise5.png);
       }
+  }
+
+    #barnacle {
+      top: 8%;
+      width: 500px;
+      height: 550px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+  animation: penis 2s infinite;
+      transition-timing-function: ease-in-out;
+      position: absolute;
+  }
+
+  @-webkit-keyframes penis {
+
+      0% {
+          background-image: url(barnacle1.png);
+      }
+
+      25% {
+          background-image: url(barnacle2.png);
+      }
+
+      50% {
+          background-image: url(barnacle3.png);
+      }
+
+      75% {
+          background-image: url(barnacle4.png);
+      }
+
+      100% {
+          background-image: url(barnacle5.png);
+      }
+
+     
   }
 
 
